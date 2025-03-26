@@ -84,3 +84,10 @@ CSR (Certificate Signing Request) là một file chứa thông tin mã hóa củ
 --- 
 
 ### PFX là gì ? 
+- File PFX (persional Exchange Format) còn được gọi là PKCS #12 là một định dạng tệp chứa các chứng chỉ bảo mật và các khóa mã hóa liên quan. Đây là tệp nhị phân lưu trữ cả public certificate và private key và thường được bảo vệ bằng mật khẩu. Nó thường được dùng để cài đặt SSL/TLS trên các web server hoặc để xuất nhập các chứng chỉ giữa các hệ thống khác nhau.
+### Cách chuyển từ crt file sang PFX file ?
+1. Truy cập vào đường dẫn https://www.httpcs.com/en/ssl-converter để convert sang file PFX
+2. Import file lên để convert. Trước khi import file phải có 2 file .crt và .key. Ta lần lượt import file .crt và file .key vào sau đó chọn định dạng **PEM (.pem, .crt, .cer, .key)** tại **Current certificate format** và **PKCS#12/PFX(.pfx, .p12)** tại **Final conversion format** sau đó click **Convert**
+3. Sau khi convert file xong thì ta tiến hành tải file về.
+
+---
