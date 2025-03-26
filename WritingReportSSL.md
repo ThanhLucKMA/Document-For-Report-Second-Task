@@ -47,9 +47,9 @@ CSR (Certificate Signing Request) là một file chứa thông tin mã hóa củ
     `2048`: độ dài của khóa RSA là 2048 bit
 #### Sau đó kiểm tra key đã tạo thành công chưa bằng lệnh 
     `openssl rsa -in PrivateKey001.key -text -noout`
-![text](./Imagers/Screenshot%20from%202025-03-25%2015-10-53.png)
+![text](./ImagersSSL/Screenshot%20from%202025-03-25%2015-10-53.png)
 #### Trên GUI ta cũng thấy được key vừa tạo 
-![text](./Imagers/Screenshot%20from%202025-03-25%2015-22-59.png)
+![text](./ImagersSSL/Screenshot%20from%202025-03-25%2015-22-59.png)
 #### Bước 2: Tạo file CSR bằng private key vừa tạo bên trên 
     `openssl req -new -key PrivateKey001.key -out CSRFile001.csr`
 - Giải thích: 
@@ -65,10 +65,10 @@ CSR (Certificate Signing Request) là một file chứa thông tin mã hóa củ
   + Organizational Unit Name: Đơn vị hoặc phòng ban.
   + Common Name: Tên cá nhân hoặc tên miền (ví dụ: tech.training.vietnix.tech).
   + Email Address: Địa chỉ email liên lạc.
-![text](./Imagers/Screenshot%20from%202025-03-25%2016-01-41.png)
+![text](./ImagersSSL/Screenshot%20from%202025-03-25%2016-01-41.png)
 #### Kiểm tra file CSR được tạo bằng lệnh 
     `openssl req -in CSRFile001.csr -text -noout`
-![text](./Imagers/Screenshot%20from%202025-03-25%2016-02-09.png)
+![text](./ImagersSSL/Screenshot%20from%202025-03-25%2016-02-09.png)
 #### 2 file này cần giữ lại, file csr để đăng kí kích hoạt dịch vụ SSL, file key dùng để cài chứng chỉ SSL sau khi nhận được certificate.
 ---
 
